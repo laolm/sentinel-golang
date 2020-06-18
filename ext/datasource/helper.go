@@ -209,7 +209,7 @@ func FrequencyParamsRulesJsonConverter(src []byte) (interface{}, error) {
 		freqRule := &hotspot.Rule{
 			Resource:          r.Get("resource").String(),
 			MetricType:        hotspot.MetricType(r.Get("metricType").Int()),
-			Behavior:          hotspot.ControlBehavior(r.Get("behavior").Int()),
+			ControlBehavior:   hotspot.ControlBehavior(r.Get("controlBehavior").Int()),
 			ParamIndex:        int(r.Get("paramIndex").Int()),
 			Threshold:         r.Get("threshold").Float(),
 			MaxQueueingTimeMs: r.Get("maxQueueingTimeMs").Int(),
